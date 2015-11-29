@@ -17,4 +17,9 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="fiends">
+        <item name="android:textSize">20sp</item>
+        />
+    </style>
+
 </resources>
