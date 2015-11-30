@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcea92"
+    tools:context="com.example.amgad.movies_sn.Login">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/movie2"
+        android:layout_marginTop="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Movies Network"
+        android:textSize="25sp"
+        android:textColor="#dc1453"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp" />
+
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_gravity="center"
+        android:textColorHint="#dc1453"
+        android:textSize="20sp"/>
+
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10sp"
+        android:textColorHint="#dc1453"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bLogin"
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:background="#dc1453"
+        android:layout_marginBottom="10sp"
+        android:layout_gravity="center"
+        android:textColor="#fcea92"
+
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bFbLogin"
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Log in with FaceBook"
+        android:background="#4456f1"
+        android:layout_gravity="center"
+        android:textColor="#f5f5f7"
+        android:textSize="20sp" />
+
+
+
+
+</LinearLayout>
