@@ -28,7 +28,7 @@
         android:textColor="#fffdfd"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="0dp"
-        android:text="Posts"
+        android:text="My Movies"
         android:layout_weight="0.05"
         />
 
@@ -43,7 +43,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginLeft="2dp"
         android:text="Friends"
-        android:id="@+id/button2"
+        android:id="@+id/button12"
         android:layout_weight="0.05"
         />
 
@@ -89,10 +89,19 @@
         android:text="Post"
         />
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
     <ListView
-        android:id="@+id/android:list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buckysListView"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentStart = "true"
+        ></ListView>
+    </LinearLayout>
 
 
 
