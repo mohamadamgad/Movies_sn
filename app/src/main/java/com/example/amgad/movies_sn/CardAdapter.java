@@ -75,12 +75,26 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
         public ImageView imgThumbnail;
         public TextView tvitem;
         public TextView tvDesitem;
+        public View view;
+        public TimeItem currentItem;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            view=itemView;
+
             imgThumbnail = (ImageView)itemView.findViewById(R.id.img_thumbnail);
             tvitem = (TextView)itemView.findViewById(R.id.tv_item);
             tvDesitem = (TextView)itemView.findViewById(R.id.tv_des_item);
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) {
+
+                }
+            });
+
+        }
+        public void onBindViewHolder(ViewHolder viewHolder, int i) {
+            viewHolder.currentItem = mItems.get(i);
         }
     }
 }
