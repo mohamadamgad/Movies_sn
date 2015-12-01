@@ -29,7 +29,14 @@
         <activity
             android:name=".Friends"
             android:label="@string/title_activity_friends"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Friends_profile"
+            android:label="@string/title_activity_friends_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Movies"
+            android:label="@string/title_activity_movies"></activity>
     </application>
 
 </manifest>
