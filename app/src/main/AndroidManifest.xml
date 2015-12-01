@@ -18,6 +18,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".My_profile"
+            android:label="@string/title_activity_my_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Edit_profile"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Friends"
+            android:label="@string/title_activity_friends"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Friends_profile"
+            android:label="@string/title_activity_friends_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Movies"
+            android:label="@string/title_activity_movies" />
+        <activity
+            android:name=".Users"
+            android:label="@string/title_activity_users"></activity>
     </application>
 
 </manifest>
