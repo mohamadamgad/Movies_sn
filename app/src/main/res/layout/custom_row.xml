@@ -10,6 +10,13 @@
         android:src="@drawable/profile"
         android:layout_margin="5dp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,4 +24,34 @@
         android:text="Large Text"
         android:id="@+id/buckysText"
         android:layout_margin="5dp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textcomment"
+        android:layout_margin="5dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="-270dp"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:background="#b42c2c"
+        android:textColor="#fffdfd"
+        android:text="comment"
+        />
+    <Button
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:background="#b42c2c"
+        android:textColor="#fffdfd"
+        android:text="view"
+        />
 </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.amgad.movies_sn;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,6 +32,19 @@ public class Friends extends Activity {
         posts.add("Zayood");
         posts.add("omar");
         posts.add("DIAA");
+
+
+//        Bundle bun=this.getIntent().getExtras();
+//        Intent i = getIntent();
+//        ArrayList<String> list = i.getStringArrayListExtra("post");
+////        ArrayList<String> newposts = bun.getStringArrayList("posts");
+//
+//        posts.add(0,list.get(0));
+
+//        Bundle b=this.getIntent().getExtras();
+//        ArrayList<String> postnew =b.getStringArrayList("key");
+//
+//        posts.add(0,postnew.get(0));
 
 
         ListAdapter buckysAdapter = new CustomAdapter(this, posts);

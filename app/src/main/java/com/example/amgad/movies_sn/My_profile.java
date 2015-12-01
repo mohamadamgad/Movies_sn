@@ -19,29 +19,24 @@ import java.util.ArrayList;
 public class My_profile extends Activity implements View.OnClickListener{
 
     ArrayList<String> posts = new ArrayList<String>();
+//    Context context = getApplicationContext();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_profile);
 
-
-        posts.add("ana");
-        posts.add("gamed");
-        posts.add("gedan");
-        posts.add("gedan2");
-        posts.add("gamed");
-        posts.add("gedan");
-        posts.add("gedan2");
-        posts.add("gamed");
-        posts.add("gedan");
-        posts.add("gedan2");
-
+        Intent intent = getIntent();
+        posts = intent.getStringArrayListExtra("key");
+        if(posts == null){
+            posts = new ArrayList<String>();
+        }
 //        String[] foods = {"Bacon", "Ham", "Tuna", "Candy", "Meatball", "Potato"};
 
         ListAdapter buckysAdapter = new CustomAdapter(this, posts);
         ListView buckysListView = (ListView) findViewById(R.id.list);
-            buckysListView.setAdapter(buckysAdapter);
+        buckysListView.setAdapter(buckysAdapter);
 
 
         Button edit = (Button) findViewById(R.id.Button01);
@@ -56,11 +51,6 @@ public class My_profile extends Activity implements View.OnClickListener{
 
         Button post = (Button) findViewById(R.id.buttonpost);
         post.setOnClickListener(this);
-
-
-
-
-
 
     }
 
@@ -89,14 +79,31 @@ public class My_profile extends Activity implements View.OnClickListener{
             case R.id.buttonpost:
                 TextView text = (TextView) findViewById(R.id.editText);
                 String newPost = text.getText().toString();
-                posts.add(0,newPost);
+                posts.add(0, newPost);
 
-                Context context = getApplicationContext();
-                CharSequence text1 = newPost;
-                int duration = Toast.LENGTH_SHORT;
 
-                Toast toast = Toast.makeText(context, newPost, duration);
-                toast.show();
+
+
+
+//                Bundle bun=new Bundle();
+//                bun.putStringArrayList("key",posts);
+                Intent i=new Intent(this, My_profile.class);
+                i.putStringArrayListExtra("key", posts);
+                startActivity(i);
+//                i.putExtras(bun);
+
+
+
+
+
+
+
+//                Context context = getApplicationContext();
+//                CharSequence text1 = newPost;
+//                int duration = Toast.LENGTH_SHORT;
+//
+//                Toast toast = Toast.makeText(context, newPost, duration);
+//                toast.show();
 
                 break;
 
@@ -242,20 +249,13 @@ public class My_profile extends Activity implements View.OnClickListener{
 //                startActivityForResult(movies, 0);
 //                break;
 //
-////            case R.id.comment:
-////                Intent comment = new Intent(b.getContext(), Edit_profile.class);
-////                startActivityForResult(comment, 0);
-////                break;
+//            case R.id.comment:
+//                Intent comment = new Intent(b.getContext(), Edit_profile.class);
+//                startActivityForResult(comment, 0);
+//                break;
 //
 //            default:
 //                break;
 //        }
-//
-//
 //    }
-//
-//
-//
 //}
-//
-//
