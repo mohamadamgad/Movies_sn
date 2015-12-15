@@ -1,0 +1,20 @@
+
+<div class="post new">
+  <h2>Post</h2>
+
+  <%= form_for(:subject, :url => {:action => 'new'}) do |f| %>
+
+    <table summary="Subject form fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field :content %></td>
+      </tr>
+
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Post") %>
+    </div>
+
+  <% end %>
+</div>

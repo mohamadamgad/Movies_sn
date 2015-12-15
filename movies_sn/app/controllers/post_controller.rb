@@ -4,7 +4,10 @@ class PostController < ApplicationController
 		@posts = Post.all 
 	end
 
-	def create
-		@post = Post.new 
+	def new
+		@post = Post.new(:content => params[:content])
+		@post.save!
 	end
+
+
 end

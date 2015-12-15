@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   #get "firend/index"
+  post "post/new"
   match ':controller(/:action(/:id))', :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -22,6 +22,7 @@ class UserController < ApplicationController
 
 	def editProfile
 		
-		
 	end
+
+	
 end
