@@ -18,6 +18,7 @@ public class Users extends Activity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String s;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
 
@@ -70,10 +71,6 @@ public class Users extends Activity implements View.OnClickListener{
                 Intent movies = new Intent(b.getContext(), Movies.class);
                 startActivityForResult(movies, 0);
                 break;
-
-
-
-
             default:
                 break;
         }

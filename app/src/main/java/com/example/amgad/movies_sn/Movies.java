@@ -16,6 +16,7 @@ public class Movies extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String s;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
 
