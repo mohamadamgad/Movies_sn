@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="169dp"
             android:layout_height="150dp"
-            android:src="@drawable/profile"
+            android:src="@drawable/profilepic"
             android:layout_weight="0.05"
             android:paddingLeft="-20dp"
             />

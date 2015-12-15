@@ -2,6 +2,7 @@ package com.example.amgad.movies_sn;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
 
@@ -10,8 +11,11 @@ import android.widget.ArrayAdapter;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.ArrayAdapter;
+        import android.widget.Button;
         import android.widget.ImageView;
-        import android.widget.TextView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -24,8 +28,15 @@ class CustomAdapter extends ArrayAdapter<String> {
         this.context = context;
     }
 
+
+
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+
+
+
         LayoutInflater buckysInflater = LayoutInflater.from(getContext());
         View customView = buckysInflater.inflate(R.layout.custom_row, parent, false);
 
@@ -33,7 +44,13 @@ class CustomAdapter extends ArrayAdapter<String> {
         buckysText.setText(Posts.get(position));
         ImageView buckysImage = (ImageView) customView.findViewById(R.id.buckysImage);
 
+        Button comment = (Button) customView.findViewById(R.id.commentbutton);
+
+
+
         buckysImage.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
                 public void onClick(View v) {
                     Intent myIntent = new Intent(v.getContext(), Friends_profile.class);
@@ -42,7 +59,17 @@ class CustomAdapter extends ArrayAdapter<String> {
             });
 
 
-        buckysImage.setImageResource(R.drawable.profile);
+        comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(v.getContext(), Comment.class);
+                context.startActivity(myIntent);
+            }
+        });
+
+
+
+        buckysImage.setImageResource(R.drawable.profilepic);
         return customView;
     }
 }

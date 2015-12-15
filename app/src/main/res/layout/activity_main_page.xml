@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.example.amgad.movies_sn.MainActivity">
+
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:background="#de3535"
+        android:text="Movies || socialNetwork"
+        android:fontFamily="sans-serif-normal"
+        android:textStyle="bold"
+        android:textSize="24dp"
+
+
+
+        />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
+        android:src="@drawable/bp"
+        android:id="@+id/profile"
+
+        />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-140dp"
+        android:background="#ffffff"
+        android:src="@drawable/bs"
+        android:id="@+id/search"
+
+        />
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:text="Timeline"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-normal"
+        android:textStyle="bold"
+        android:background="#fcea92"
+        android:textSize="30dp"
+        android:id="@+id/timeline"
+
+
+        />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="60dp"
+        android:background="#ffffff"
+        android:src="@drawable/mood2"
+        android:id="@+id/moods"
+
+
+
+        />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="-140dp"
+        android:background="#ffffff"
+        android:src="@drawable/movieee"
+        android:id="@+id/moviee"
+
+        />
+</LinearLayout>

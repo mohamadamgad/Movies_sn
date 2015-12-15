@@ -4,8 +4,12 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,11 +17,18 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import retrofit.RestAdapter;
 
 import java.util.ArrayList;
 
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
+import retrofit.http.Path;
+
 public class My_profile extends Activity implements View.OnClickListener{
 
+    myAPI api;
     ArrayList<String> posts = new ArrayList<String>();
 //    Context context = getApplicationContext();
 
@@ -26,6 +37,7 @@ public class My_profile extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_profile);
+
 
         Intent intent = getIntent();
         posts = intent.getStringArrayListExtra("key");
@@ -51,19 +63,51 @@ public class My_profile extends Activity implements View.OnClickListener{
 
         Button post = (Button) findViewById(R.id.buttonpost);
         post.setOnClickListener(this);
+        final RestAdapter ADAPTER =
+                new RestAdapter.Builder().setEndpoint("http://10.0.2.2:3000").build();
+         api = ADAPTER.create(myAPI.class);
+
 
     }
 
 
 
     public void onClick(View b){
+
         switch (b.getId()) {
 
 
-
             case R.id.button12:
-                Intent friends = new Intent(b.getContext(), Friends.class);
-                startActivityForResult(friends, 0);
+//                Intent friends = new Intent(b.getContext(), Friends.class);
+//                startActivityForResult(friends, 0);
+
+                api.findFriends(new Callback<users>() {
+                    @Override
+                    public void success(users users, Response response) {
+                        String x  = users.getFirst_name();
+                        Log.d("eshta3'al yalla" , x);
+                    }
+
+                    @Override
+                    public void failure(RetrofitError error) {
+                        Log.d("eeh ba2aaa ", error.toString());
+
+                    }
+                });
+
+//                api.findFriends( new Callback<users>() {
+//                    @Override
+//                    public void success(String a, Response response) {
+//                        Log.d("khoood ", a );
+//
+//                        //  startActivity(new Intent(My_profile.this, friends.class));
+//                    }
+//
+//                    @Override
+//                    public void failure(RetrofitError error) {
+//                        Log.d("eeh ba2aaa ", error.toString());
+//                    }
+//                });
                 break;
 
             case R.id.Button01:
@@ -83,27 +127,10 @@ public class My_profile extends Activity implements View.OnClickListener{
 
 
 
-
-
-//                Bundle bun=new Bundle();
-//                bun.putStringArrayList("key",posts);
                 Intent i=new Intent(this, My_profile.class);
                 i.putStringArrayListExtra("key", posts);
                 startActivity(i);
-//                i.putExtras(bun);
 
-
-
-
-
-
-
-//                Context context = getApplicationContext();
-//                CharSequence text1 = newPost;
-//                int duration = Toast.LENGTH_SHORT;
-//
-//                Toast toast = Toast.makeText(context, newPost, duration);
-//                toast.show();
 
                 break;
 

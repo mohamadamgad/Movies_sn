@@ -35,11 +35,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bLogin:
-                if( etUsername.getText().toString().length() == 0 ) {
+                if( etUsername.getText() == null ) {
                     etUsername.setError("Username is required!");
                 }
-                if( etPassword.getText().toString().length() == 0 ) {
-                    etPassword.setError("Username is required!");
+                if( etPassword.getText() == null ) {
+                    etPassword.setError("Password is required!");
                 }
 
                 break;

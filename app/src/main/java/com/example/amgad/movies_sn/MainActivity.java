@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+
+
+
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -40,10 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     etUsername.setError("Username is required!");
                 }
                 if( etPassword.getText().toString().length() == 0 ) {
-                    etPassword.setError("Username is required!");
+                    etPassword.setError("Password is required!");
                 }
-                else{
-                    Intent login = new Intent(v.getContext(), My_profile.class);
+                else {
+                    Intent login = new Intent(v.getContext(), Main_page.class);
                     startActivityForResult(login, 0);
                     break;
 
