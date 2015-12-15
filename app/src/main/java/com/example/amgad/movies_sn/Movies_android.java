@@ -12,13 +12,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Movies extends Activity {
+public class Movies_android extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String s;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movies);
+        setContentView(R.layout.activity_movies_android);
 
         ArrayList<String> posts = new ArrayList<String>();
 
@@ -44,7 +44,7 @@ public class Movies extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String food = String.valueOf(parent.getItemAtPosition(position));
-                        Toast.makeText(Movies.this, food, Toast.LENGTH_LONG).show();
+                        Toast.makeText(Movies_android.this, food, Toast.LENGTH_LONG).show();
                     }
                 }
         );

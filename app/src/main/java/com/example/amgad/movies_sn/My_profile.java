@@ -116,7 +116,7 @@ public class My_profile extends Activity implements View.OnClickListener{
                 break;
 
             case R.id.button13:
-                Intent movies = new Intent(b.getContext(), Movies.class);
+                Intent movies = new Intent(b.getContext(), Movies_android.class);
                 startActivityForResult(movies, 0);
                 break;
 

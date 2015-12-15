@@ -62,13 +62,13 @@ public class Friends_profile extends Activity implements View.OnClickListener{
 
 
             case R.id.button12:
-                Intent friends = new Intent(b.getContext(), Friends.class);
+                Intent friends = new Intent(b.getContext(), Friends_android.class);
                 startActivityForResult(friends, 0);
                 break;
 
 
             case R.id.button13:
-                Intent movies = new Intent(b.getContext(), Movies.class);
+                Intent movies = new Intent(b.getContext(), Movies_android.class);
                 startActivityForResult(movies, 0);
                 break;
 

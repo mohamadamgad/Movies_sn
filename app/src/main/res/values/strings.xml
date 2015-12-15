@@ -106,5 +106,8 @@
     <string name="title_activity_moviedb">moviedb</string>
     <string name="title_activity_main_page">Main_page</string>
     <string name="title_activity_comment">Comment</string>
+    <string name="title_activity_friends_android">Friends_android</string>
+    <string name="title_activity_movies_android">Movies_android</string>
+    <string name="title_activity_users_android">Users_android</string>
     >>>>>>> 6c90e139f1641d1a1250c6502bf16744d2e48efb
 </resources>

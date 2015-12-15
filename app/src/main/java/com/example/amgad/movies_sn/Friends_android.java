@@ -13,13 +13,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Friends extends Activity {
+public class Friends_android extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String s;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friends);
+        setContentView(R.layout.activity_friends_profile);
 
         ArrayList<String> posts = new ArrayList<String>();
 
@@ -58,7 +58,7 @@ public class Friends extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String food = String.valueOf(parent.getItemAtPosition(position));
-                        Toast.makeText(Friends.this, food, Toast.LENGTH_LONG).show();
+                        Toast.makeText(Friends_android.this, food, Toast.LENGTH_LONG).show();
                     }
                 }
         );

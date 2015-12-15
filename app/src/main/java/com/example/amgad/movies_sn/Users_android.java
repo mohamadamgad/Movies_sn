@@ -14,13 +14,13 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Users extends Activity implements View.OnClickListener{
+public class Users_android extends Activity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String s;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_users);
+        setContentView(R.layout.activity_users_android);
 
         ArrayList<String> posts = new ArrayList<String>();
 
@@ -62,13 +62,13 @@ public class Users extends Activity implements View.OnClickListener{
 
 
             case R.id.button12:
-                Intent friends = new Intent(b.getContext(), Friends.class);
+                Intent friends = new Intent(b.getContext(), Friends_android.class);
                 startActivityForResult(friends, 0);
                 break;
 
 
             case R.id.button13:
-                Intent movies = new Intent(b.getContext(), Movies.class);
+                Intent movies = new Intent(b.getContext(), Movies_android.class);
                 startActivityForResult(movies, 0);
                 break;
             default:
